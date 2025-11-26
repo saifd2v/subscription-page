@@ -1,0 +1,242 @@
+        :root {
+            --main-color: #f5f7f9;
+            --second-color: #ffffff;
+            --button-color: #0566ff;
+            --true-color: #67a2fd;
+            --main-title-color: #080f1a;
+            --second-title-color: #929db2;
+            --small-background-color: #f5f7f9;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal';
+            background-color: var(--main-color);
+        }
+
+        .subs-section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subs-container {
+            min-height: 700px;
+            width: 1200px;
+            background-color: var(--second-color);
+            height: auto;
+            display: flex;
+            width: 70%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .plans-content {
+            display: flex;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .plan {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 1rem 1.4rem;
+            align-items: center;
+            height: auto;
+        }
+
+        .plan-title {
+            font-size: 29px;
+            font-weight: 700;
+            color: var(--main-title-color);
+        }
+
+        .plan-desc {
+            width: 65%;
+            color: var(--second-title-color);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .plan-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .plan-price {
+            display: flex;
+            gap: 4px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .price-count {
+            font-size: 3.4rem;
+            font-weight: 500;
+        }
+
+        .price {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .usd,
+        .time {
+            color: var(--second-title-color);
+            font-weight: 500;
+        }
+
+        .free-plan {
+            padding: 0.8rem 3rem;
+            width: 80%;
+            border: 1px solid var(--second-title-color);
+            border-radius: 6px;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .line {
+            min-height: 700px;
+            background-color: var(--second-title-color);
+            width: 1px;
+            height: auto;
+            opacity: 0.4;
+        }
+
+        .note {
+            color: var(--second-title-color);
+            font-weight: 500;
+        }
+
+        .subs-button {
+            padding: 0.8rem 3rem;
+            width: 80%;
+            border: 1px solid var(--second-title-color);
+            border-radius: 6px;
+            background: var(--button-color);
+            color: var(--second-color);
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .subs-button:hover {
+            transform: rotateY(-7deg) rotateX(7deg) perspective(1000px);
+        }
+
+        .features {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            gap: 14px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: first baseline;
+            gap: 10px;
+        }
+
+        .feature-text {
+            font-size: 17px;
+        }
+
+        .feature i {
+            background-color: var(--small-background-color);
+            color: var(--true-color);
+            padding: 4px 4px;
+            border-radius: 50%;
+            font-size: 13px;
+        }
+
+        .plan button {
+            width: 100%;
+        }
+
+        .advanced {
+            position: relative;
+            border: 2px solid var(--button-color);
+            border-radius: 6px;
+        }
+
+        .recommended {
+            position: absolute;
+            top: -25px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+            background-color: var(--button-color);
+            padding: 6px 10px;
+            color: var(--second-color);
+            border-radius: 6px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 1770px) {
+            .subs-section {
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+            }
+
+            .subs-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .subs-section {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .subs-container {
+                width: auto;
+            }
+
+            .plans-content {
+                margin-top: 25px;
+            }
+
+            .line {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .plans-content {
+                flex-wrap: wrap;
+                margin-top: 15px;
+            }
+
+            .plan {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .subs-section {
+                width: 100%;
+            }
+
+            .plans-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
